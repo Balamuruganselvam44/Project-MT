@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/authSlice';
-import './Login.css'; // 👈 Custom styles here
+import './login.css'; // 👈 Custom styles here
 
 const Login = () => {
   const navigate = useNavigate();
