@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import loginImage from '../../assets/login-image.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { login } from '../../redux/authSlice';
+import { login, logout } from '../../redux/authSlice';
 import './login.css'; // 👈 Custom styles here
 
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(logout());
+  }, [dispatch]);
 
   const [formData, setFormData] = useState({
     email: '',
