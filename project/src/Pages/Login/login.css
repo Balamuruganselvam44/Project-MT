@@ -1,0 +1,102 @@
+.login-container {
+    margin-top: 60px;
+  }
+  
+  .login-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left; /* Aligns title to the left */
+  }
+  .login-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Increased width */
+    max-width: 100%;
+  }
+  
+  .login-box .form-control {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+  }
+  
+  .login-box .form-control:focus {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+  }
+  
+  .login-subtext {
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: left; /* Aligns the "New user? Create an account" text to the left */
+  }
+  
+  
+  .login-subtext a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .divider-text {
+    text-align: center;
+    margin: 20px 0 10px;
+    font-weight: 500;
+    color: #666;
+    position: relative;
+  }
+  
+  .divider-text::before,
+  .divider-text::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 45%;
+    background: #ccc;
+    top: 50%;
+  }
+  
+  .divider-text::before {
+    left: 0;
+    z-index: 1;
+  }
+  
+  .divider-text::after {
+    right: 0;
+    z-index: 1;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+  
+  .social-icons i {
+    cursor: pointer;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 50%;
+    color: #333; /* Default icon color */
+    background: transparent; /* No background */
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons i:hover {
+    color: #333; /* Keep icon color same or change if you want */
+    background: transparent; /* No fill on hover */
+    border-color: #000; /* Optional: darker border on hover */
+    transform: scale(1.1); /* Optional: slight scale effect on hover */
+  }
+
+  .large-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: rgba(255, 255, 255, 0);
+  }
