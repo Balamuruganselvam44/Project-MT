@@ -5,7 +5,7 @@
   .login-title {
     font-weight: 700;
     margin-bottom: 10px;
-    text-align: left; /* Aligns title to the left */
+    text-align: left;
   }
   .login-image {
     max-width: 100%;
@@ -17,7 +17,7 @@
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Increased width */
+    width: 400px;
     max-width: 100%;
   }
   
@@ -39,7 +39,7 @@
   .login-subtext {
     margin-bottom: 20px;
     font-weight: 500;
-    text-align: left; /* Aligns the "New user? Create an account" text to the left */
+    text-align: left;
   }
   
   
@@ -90,16 +90,16 @@
     border: 1px solid #333;
     padding: 10px;
     border-radius: 50%;
-    color: #333; /* Default icon color */
-    background: transparent; /* No background */
+    color: #333;
+    background: transparent;
     transition: all 0.3s ease;
   }
   
   .social-icons i:hover {
-    color: #333; /* Keep icon color same or change if you want */
-    background: transparent; /* No fill on hover */
-    border-color: #000; /* Optional: darker border on hover */
-    transform: scale(1.1); /* Optional: slight scale effect on hover */
+    color: #333;
+    background: transparent;
+    border-color: #000;
+    transform: scale(1.1);
   }
 
   .large-checkbox {

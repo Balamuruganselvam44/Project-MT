@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login, logout } from '../../redux/authSlice';
-import './login.css'; // 👈 Custom styles here
+import './login.css';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -66,12 +66,11 @@ const Login = () => {
   return (
     <Container className="login-container">
     <Row className="align-items-center justify-content-center">
-      {/* Left Column: Login Form */}
       <Col md={4} lg={5}>
         <div className="login-box">
           <h2 className="login-title">Sign In</h2>
           <p className="login-subtext">
-            New user? <a href="/register">Create an account</a>
+            New user? <a href="/">Create an account</a>
           </p>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
@@ -98,9 +97,11 @@ const Login = () => {
                 isInvalid={!!errors.password}
               />
               <Form.Control.Feedback type="invalid">
-                {errors.password === 'Password is required' ? errors.password : 
-                'Password must be minimum 8 characters long (must contain at least 1 capital letter, 1 number & 1 symbol)'}
-              </Form.Control.Feedback>
+  {errors.password === 'Password is required'
+    ? errors.password
+    : 'Password must be at least 8 characters long and include at least one uppercase letter, one number, and one special character.'}
+</Form.Control.Feedback>
+
             </Form.Group>
   
             <div className="d-flex align-items-center mb-3">
@@ -125,7 +126,6 @@ const Login = () => {
         </div>
       </Col>
   
-      {/* Right Column: Image */}
       <Col md={6} lg={6} className="text-center d-none d-md-block">
         <img
           src={loginImage}

@@ -1,6 +1,4 @@
 import { createSlice, createAsyncThunk,createSelector  } from '@reduxjs/toolkit';
-
-// Create async thunk for fetching countries
 export const fetchCountries = createAsyncThunk(
   'countries/fetchCountries',
   async (_, { getState }) => {
