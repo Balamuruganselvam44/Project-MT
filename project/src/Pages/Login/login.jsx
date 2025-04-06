@@ -126,7 +126,7 @@ const Login = () => {
       </Col>
   
       {/* Right Column: Image */}
-      <Col md={6} lg={6} className="text-center">
+      <Col md={6} lg={6} className="text-center d-none d-md-block">
         <img
           src={loginImage}
           alt="Login illustration"

@@ -74,7 +74,7 @@ const Home = () => {
   };
 
   // Import image
-  const loginImage = new URL('/src/assets/Slider.png', import.meta.url).href;
+  const loginImage = new URL('/src/assets/media.png', import.meta.url).href;
 
   const slides = [
     { image: loginImage },
@@ -97,6 +97,7 @@ const Home = () => {
                   active={filter === region}
                   onClick={() => handleFilterChange(region)}
                   className={`px-3 text-${filter === region ? 'dark' : 'secondary'}`}
+                  style={filter === region ? { textDecoration: 'underline', textUnderlineOffset: '4px' } : {}}
                 >
                   {region}
                 </Nav.Link>
@@ -119,7 +120,7 @@ const Home = () => {
                       src={slide.image}
                       alt={`Slide ${index + 1}`}
                       style={{ 
-                        width: '200px',
+                        width: '90px',
                         height: '260px',
                         margin: '0 auto',
                         display: 'block',
@@ -136,7 +137,7 @@ const Home = () => {
               <img
                   src={loginImage}
                   style={{ 
-                    width: '200px',
+                    width: '90px',
                     height: '200px',
                     margin: '0 auto',
                     display: 'block',
@@ -197,10 +198,10 @@ const Home = () => {
           <i className="fab fa-facebook-f"></i>
           <i className="fab fa-twitter"></i>
           <i className="fab fa-linkedin-in"></i>
-          <i className="fab fa-instagram"></i>
+          <i className="fab fa-youtube"></i>
         </div>
-        <p>foundbybala@gmail.com</p>
-        <p>Copyright © 2025 Focus. All rights reserved.</p>
+        <p>Example@email.com </p>
+        <p>Copyright © 2020 Name. All rights reserved.</p>
       </footer>
     </Container>
   );

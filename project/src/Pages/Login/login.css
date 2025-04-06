@@ -30,6 +30,11 @@
     border: 1px solid #000 !important;
     box-shadow: none !important;
   }
+
+  .login-box .invalid-feedback {
+    text-align: left;
+    margin-left: 0;
+  }
   
   .login-subtext {
     margin-bottom: 20px;
@@ -43,23 +48,26 @@
     text-decoration: none;
   }
   
-  .divider-text {
+.divider-text {
     text-align: center;
     margin: 20px 0 10px;
     font-weight: 500;
     color: #666;
     position: relative;
-  }
-  
-  .divider-text::before,
-  .divider-text::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider-text::before,
+.divider-text::after {
     content: "";
-    position: absolute;
+    position: relative;
     height: 1px;
-    width: 45%;
+    flex-grow: 1;
     background: #ccc;
-    top: 50%;
-  }
+    margin: 0 10px;
+}
   
   .divider-text::before {
     left: 0;
@@ -98,5 +106,24 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: rgba(255, 255, 255, 0);
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #000;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+  }
+
+  .large-checkbox:checked {
+    background-color: transparent;
+  }
+
+  .large-checkbox:checked::before {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 14px;
   }
