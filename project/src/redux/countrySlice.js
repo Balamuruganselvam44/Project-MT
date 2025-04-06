@@ -28,14 +28,14 @@ const countrySlice = createSlice({
     status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
     error: null,
     filter: 'All',
-    displayCount: 8
+    displayCount: 12
   },
   reducers: {
     setFilter: (state, action) => {
       state.filter = action.payload;
     },
     incrementDisplayCount: (state) => {
-      state.displayCount += 8;
+      state.displayCount += 12;
     }
   },
   extraReducers: (builder) => {
