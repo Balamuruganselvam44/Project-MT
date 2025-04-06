@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import Login from './Pages/Login/login';
 import Home from './Pages/Home/home';
 import './App.css';
-//login
 const ProtectedRoute = ({ children }) => {
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
   

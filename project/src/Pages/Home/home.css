@@ -116,7 +116,6 @@
   border: none;
 }
 
-/* Side Image */
 .side-image-container {
   border-radius: 8px;
   overflow: hidden;
@@ -135,7 +134,6 @@
   object-fit: contain;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .hero-section h2 {
     padding: 15px 0;

@@ -5,8 +5,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCountries, setFilter, selectFilteredCountries, incrementDisplayCount } from '../../redux/countrySlice';
-
+import { fetchCountries, setFilter, selectFilteredCountries, incrementDisplayCount } from '../../redux/homeSlice';
+import loginImage from '/src/assets/media.png';
 const Home = () => {
   const dispatch = useDispatch();
   const slider = useRef(null);
@@ -73,10 +73,8 @@ const Home = () => {
     
   };
 
-  // Import image
-  const loginImage = new URL('/src/assets/media.png', import.meta.url).href;
-
   const slides = [
+    { image: loginImage },
     { image: loginImage },
     { image: loginImage },
     { image: loginImage }
@@ -84,7 +82,6 @@ const Home = () => {
 
   return (
     <Container>
-      {/* Header with Filters */}
       <Navbar expand="md" className="mb-4">
         <Container fluid>
           <Navbar.Brand className="fw-bold">Countries</Navbar.Brand>
@@ -107,7 +104,6 @@ const Home = () => {
         </Container>
       </Navbar>
 
-      {/* Welcome + Hero Section */}
       <section className="text-center hero-section">
         <h2 className="fw-bold mb-4" style={{ letterSpacing: '4px' }}>WELCOME</h2>
         <Row className="g-4">
@@ -157,7 +153,6 @@ const Home = () => {
         {countries.map((country, idx) => (
           <Col key={country.name}>
             <div className="border rounded p-3 d-flex align-items-center">
-              {/* Left side - Flag */}
               <div className="me-3">
                 <img 
                   src={country.flag} 
@@ -168,8 +163,6 @@ const Home = () => {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-
-              {/* Right side - Text details */}
               <div>
                 <h5 className="mb-1">{country.name}</h5>
                 <span className="text-secondary">{country.region}</span>
@@ -179,8 +172,6 @@ const Home = () => {
         ))}
         </Row>
       )}
-
-      {/* Load More */}
       {status === 'succeeded' && displayCount < allCountries.length && (
         <div className="text-center mt-5">
           <button 
@@ -191,8 +182,6 @@ const Home = () => {
           </button>
         </div>
       )}
-
-      {/* Footer */}
       <footer className="text-center mt-5">
         <div className="d-flex justify-content-center gap-3 my-3">
           <i className="fab fa-facebook-f"></i>
